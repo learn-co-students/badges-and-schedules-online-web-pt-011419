@@ -1,3 +1,6 @@
+require "pry"
+
+
 def badge_maker(abc)
   return "Hello, my name is #{abc}."
 end
@@ -9,7 +12,7 @@ def batch_badge_creator(attendees)
 end
 end
 
-def assign_rooms(attender)
+def assign_rooms(attendees)
   counter = 0
   attendees.collect do |attendee|
   counter += 1
@@ -17,6 +20,11 @@ def assign_rooms(attender)
 end
 end
 
-def printer
-  
+def printer(attendees)
+  batch_badge_creator(attendees).each do |person|
+    puts person
+  end
+  assign_rooms(attendees). each do |place|
+  puts place
+end
 end
